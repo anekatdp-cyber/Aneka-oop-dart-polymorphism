@@ -1,54 +1,19 @@
-OOP Dart - Polimorfisme & Abstraksi
-📌 Deskripsi
+📘 RESUME SESI 4
+Polimorfisme & Abstraksi (Dart)
+🎯 Tujuan
 
-Repository ini berisi ringkasan materi Object Oriented Programming (OOP) pada Dart, khususnya tentang Polimorfisme dan Abstraksi.
-Dilengkapi dengan contoh kode yang dapat langsung dijalankan di dartpad.dev.
+Peserta memahami konsep Polimorfisme dan Abstraksi serta mampu mengimplementasikannya dalam program Dart.
 
-🧠 Materi yang Dipelajari
-🔹 Polimorfisme
+🧠 1. POLIMORFISME
+📌 Pengertian
 
-Polimorfisme adalah konsep OOP yang memungkinkan satu method memiliki banyak bentuk tergantung objek yang memanggilnya.
+Polimorfisme adalah kemampuan objek untuk memiliki banyak bentuk, biasanya melalui inheritance (pewarisan).
 
-✅ Polimorfisme dengan Inheritance
+📌 Contoh Konsep
 
-Subclass dapat mengubah (override) method dari parent class.
+Satu method → hasil berbeda tergantung objeknya.
 
-🎯 Manfaat Polimorfisme
-Kode lebih fleksibel
-Mudah dikembangkan
-Mengurangi duplikasi kode
-🔹 Operator is dan as
-
-Digunakan untuk pengecekan dan konversi tipe data:
-
-is → mengecek tipe objek
-as → melakukan casting tipe
-🔹 Abstraksi
-
-Abstraksi adalah proses menyembunyikan detail kompleks dan hanya menampilkan fungsi penting.
-
-📦 Abstract Class
-Tidak bisa dibuat objek langsung
-Digunakan sebagai blueprint
-⚙️ Abstract Method
-Method tanpa isi
-Wajib diimplementasikan oleh subclass
-🔹 Interface di Dart
-
-Dart tidak memiliki keyword khusus untuk interface.
-Namun, semua class bisa dijadikan interface menggunakan implements.
-
-🔹 Perbedaan extends vs implements
-extends	implements
-Mewarisi semua method	Harus override semua method
-Bisa pakai method parent	Tidak mewarisi implementasi
-🔹 Static Members & Method
-Digunakan tanpa membuat objek
-Dipanggil langsung dari class
-
-Contoh:
-
-// ====== POLIMORFISME ======
+💡 Polimorfisme dengan Inheritance
 class Hewan {
   void bersuara() {
     print("Hewan bersuara");
@@ -58,7 +23,7 @@ class Hewan {
 class Kucing extends Hewan {
   @override
   void bersuara() {
-    print("Meaw");
+    print("Meong");
   }
 }
 
@@ -68,17 +33,250 @@ class Anjing extends Hewan {
     print("Guk Guk");
   }
 }
+📌 Manfaat Polimorfisme
+Kode lebih fleksibel
+Mudah dikembangkan
+Mengurangi duplikasi kode
+🔍 is dan as Operator
+➤ is (cek tipe data)
+if (hewan is Kucing) {
+  print("Ini kucing");
+}
+➤ as (casting tipe)
+(hewan as Kucing).bersuara();
+🧪 Latihan Polimorfisme (WAJIB ADA DI TUGAS)
+void main() {
+  List<Hewan> daftarHewan = [
+    Kucing(),
+    Anjing(),
+    Burung()
+  ];
 
-class Singa extends Hewan {
-  @override
-  void bersuara() {
-    print("Rwarrwgh");
+  for (var h in daftarHewan) {
+    h.bersuara();
   }
 }
 
-// ====== ABSTRACT CLASS ======
+class Hewan {
+  void bersuara() {
+    print("Hewan bersuara");
+  }
+}
+
+class Kucing extends Hewan {
+  @override
+  void bersuara() => print("Meong");
+}
+
+class Anjing extends Hewan {
+  @override
+  void bersuara() => print("Guk Guk");
+}
+
+class Burung extends Hewan {
+  @override
+  void bersuara() => print("Cuit Cuit");
+}
+🧠 2. ABSTRAKSI
+📌 Pengertian
+
+Abstraksi adalah menyembunyikan detail implementasi dan hanya menampilkan fungsi penting.
+
+🧩 Abstract Class
 abstract class Kendaraan {
-  void jalan(); // abstract method
+  void jalan();
+}
+⚙️ Abstract Method
+class Mobil extends Kendaraan {
+  @override
+  void jalan() {
+    print("Mobil berjalan");
+  }
+}
+🔌 Interface di Dart
+
+Semua class bisa jadi interface menggunakan implements
+
+class Mesin {
+  void nyala() {}
+}
+
+class Motor implements Mesin {
+  @override
+  void nyala() {
+    print("Mesin motor nyala");
+  }
+}
+⚖️ Perbedaan extends vs implements
+extends	implements
+Turunan class	Implementasi interface
+Bisa pakai method parent	Harus override semua method
+Relasi "is-a"	Kontrak
+🧮 Static Members & Method
+class MathUtil {
+  static int tambah(int a, int b) {
+    return a + b;
+  }
+}
+
+void main() {
+  print(MathUtil.tambah(2, 3));
+}
+💼 CONTOH KASUS
+💳 1. Sistem Pembayaran
+abstract class Pembayaran {
+  void bayar();
+}
+
+class TransferBank extends Pembayaran {
+  @override
+  void bayar() {
+    print("Bayar via transfer");
+  }
+}
+
+class EWallet extends Pembayaran {
+  @override
+  void bayar() {
+    print("Bayar via e-wallet");
+  }
+}
+🔷 2. Sistem Bentuk Geometri
+abstract class Bentuk {
+  double hitungLuas();
+}
+
+class Persegi extends Bentuk {
+  double sisi;
+
+  Persegi(this.sisi);
+
+  @override
+  double hitungLuas() => sisi * sisi;
+}
+📌 CARA KERJAKAN TUGAS
+✅ Tugas 1
+Buat resume seperti ini di GitHub
+Sertakan:
+Penjelasan teori
+Semua contoh kode
+Pastikan:
+Bisa dijalankan di DartPad
+Minta ACC ke mentor
+🎁 Bonus 1, 2, 3
+Ambil soal di slide halaman 17
+Gabungkan semua jawaban ke dalam Tugas 1
+📢 Setelah ACC
+Laporkan di forum:
+"Tugas Sesi 4 sudah ACC"
+🔥 Tips Biar Cepat ACC
+Gunakan 1 file .dart yang rapi
+Tambahkan komentar di kode
+Pastikan output jelas
+Jangan hanya copy, pahami alurnya
+
+Kalau mau, aku bisa bantu:
+✅ Buatkan template repo GitHub
+✅ Gabungkan semua jadi 1 file siap submit
+✅ Bantu jawab soal bonus (hal 17)
+
+Tinggal bilang aja 👍
+
+bikin 1 dart saja
+
+Berikut saya buatkan 1 file Dart lengkap (sudah mencakup semua materi: polimorfisme, abstraksi, latihan, dan contoh kasus).
+Tinggal copy ke DartPad (dartpad.dev) atau ke file main.dart di GitHub ✅
+
+📄 main.dart (Siap Submit)
+// ================================
+// SESI 4 - POLIMORFISME & ABSTRAKSI
+// ================================
+
+void main() {
+  print("=== POLIMORFISME ===");
+
+  // Polimorfisme dengan List
+  List<Hewan> daftarHewan = [
+    Kucing(),
+    Anjing(),
+    Burung(),
+  ];
+
+  for (var h in daftarHewan) {
+    h.bersuara(); // hasil berbeda (polimorfisme)
+  }
+
+  print("\n=== OPERATOR is & as ===");
+
+  Hewan hewan = Kucing();
+
+  if (hewan is Kucing) {
+    print("Objek adalah Kucing");
+  }
+
+  (hewan as Kucing).bersuara();
+
+  print("\n=== ABSTRAKSI ===");
+
+  Kendaraan mobil = Mobil();
+  mobil.jalan();
+
+  print("\n=== INTERFACE ===");
+
+  Motor motor = Motor();
+  motor.nyala();
+
+  print("\n=== STATIC METHOD ===");
+  print("Hasil tambah: ${MathUtil.tambah(5, 3)}");
+
+  print("\n=== SISTEM PEMBAYARAN ===");
+
+  List<Pembayaran> metodeBayar = [
+    TransferBank(),
+    EWallet(),
+  ];
+
+  for (var bayar in metodeBayar) {
+    bayar.bayar();
+  }
+
+  print("\n=== SISTEM GEOMETRI ===");
+
+  Bentuk persegi = Persegi(4);
+  print("Luas Persegi: ${persegi.hitungLuas()}");
+}
+
+// ================================
+// POLIMORFISME
+// ================================
+
+class Hewan {
+  void bersuara() {
+    print("Hewan bersuara");
+  }
+}
+
+class Kucing extends Hewan {
+  @override
+  void bersuara() => print("Meong");
+}
+
+class Anjing extends Hewan {
+  @override
+  void bersuara() => print("Guk Guk");
+}
+
+class Burung extends Hewan {
+  @override
+  void bersuara() => print("Cuit Cuit");
+}
+
+// ================================
+// ABSTRAKSI
+// ================================
+
+abstract class Kendaraan {
+  void jalan();
 }
 
 class Mobil extends Kendaraan {
@@ -88,55 +286,68 @@ class Mobil extends Kendaraan {
   }
 }
 
-// ====== INTERFACE ======
-class Terbang {
-  void terbang() {}
+// ================================
+// INTERFACE (implements)
+// ================================
+
+class Mesin {
+  void nyala() {}
 }
 
-class Pesawat implements Terbang {
+class Motor implements Mesin {
   @override
-  void terbang() {
-    print("Pesawat terbang");
+  void nyala() {
+    print("Mesin motor nyala");
   }
 }
 
-// ====== STATIC ======
-class Matematika {
+// ================================
+// STATIC METHOD
+// ================================
+
+class MathUtil {
   static int tambah(int a, int b) {
     return a + b;
   }
 }
 
-void main() {
-  // ====== POLIMORFISME LIST ======
-  List<Hewan> daftarHewan = [
-    Kucing(),
-    Anjing(),
-    Singa()
-  ];
+// ================================
+// CONTOH KASUS - PEMBAYARAN
+// ================================
 
-  for (var hewan in daftarHewan) {
-    hewan.bersuara();
+abstract class Pembayaran {
+  void bayar();
+}
+
+class TransferBank extends Pembayaran {
+  @override
+  void bayar() {
+    print("Bayar via Transfer Bank");
   }
+}
 
-  // ====== IS & AS ======
-  Hewan h = Kucing();
-
-  if (h is Kucing) {
-    print("Ini adalah Kucing");
+class EWallet extends Pembayaran {
+  @override
+  void bayar() {
+    print("Bayar via E-Wallet");
   }
+}
 
-  Kucing k = h as Kucing;
-  k.bersuara();
+// ================================
+// CONTOH KASUS - GEOMETRI
+// ================================
 
-  // ====== ABSTRACT ======
-  Mobil mobil = Mobil();
-  mobil.jalan();
+abstract class Bentuk {
+  double hitungLuas();
+}
 
-  // ====== INTERFACE ======
-  Pesawat pesawat = Pesawat();
-  pesawat.terbang();
+class Persegi extends Bentuk {
+  double sisi;
 
-  // ====== STATIC ======
-  print(Matematika.tambah(7, 3));
+  Persegi(this.sisi);
+
+  @override
+  double hitungLuas() {
+    return sisi * sisi;
+  }
 }

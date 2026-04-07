@@ -224,7 +224,7 @@ void main() {
   p2.bayar();
 }
 ```
-Output:
+### Output:
 Bayar via transfer
 Bayar via e-wallet
 

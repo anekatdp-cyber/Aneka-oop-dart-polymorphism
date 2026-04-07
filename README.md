@@ -46,16 +46,16 @@ void main() {
   h2.bersuara();
 }
 
-📌 Manfaat Polimorfisme
+##📌 Manfaat Polimorfisme
 Kode lebih fleksibel
 Mudah dikembangkan
 Mengurangi duplikasi kode
 
-🔍 is dan as Operator
-🔍 Operator is dan as di Dart
+##🔍 is dan as Operator
+##🔍 Operator is dan as di Dart
 
-🧠 1. Operator is (cek tipe data)
-📌 Pengertian
+##🧠 1. Operator is (cek tipe data)
+##📌 Pengertian
 is digunakan untuk mengecek apakah suatu objek termasuk tipe tertentu
 👉 Hasilnya: true / false
 

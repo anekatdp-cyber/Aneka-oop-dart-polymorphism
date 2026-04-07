@@ -46,7 +46,7 @@ void main() {
   h2.bersuara();
 }
 
-</> murkdown
+</> markdown
 
 ##📌 Manfaat Polimorfisme
 Kode lebih fleksibel

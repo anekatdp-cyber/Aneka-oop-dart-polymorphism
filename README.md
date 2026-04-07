@@ -48,7 +48,7 @@ void main() {
 
 ```
 
-📌 Manfaat Polimorfisme
+##📌 Manfaat Polimorfisme
 Kode lebih fleksibel
 Mudah dikembangkan
 Mengurangi duplikasi kode

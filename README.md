@@ -273,7 +273,24 @@ void start();
 Method biasa adalah method yang memiliki isi (implementasi) dan dapat langsung digunakan oleh subclass tanpa harus di-override.
 
 Contoh:
-
+```dart
 void stop() {
   print("Mesin berhenti");
 }
+```
+## BONUS 2
+### 4. Apa perbedaan method abstrak dan method biasa?
+Method Abstrak	Method Biasa
+Tidak memiliki isi	Memiliki isi
+Wajib di-override	Tidak wajib di-override
+Hanya deklarasi	Sudah ada implementasi
+
+## BONUS 3
+### 5. Apa tujuan penggunaan method dalam kelas abstrak?
+
+Tujuannya adalah untuk:
+
+Menjadi kerangka (template) bagi subclass
+Memastikan subclass memiliki method tertentu
+Membantu penerapan konsep polimorfisme
+Membuat kode lebih terstruktur dan konsisten

@@ -165,7 +165,8 @@ void main() {
   mobil.jalan();
 }
 ```
-🔌 Interface (implements)
+##🔌 Interface (implements)
+```dart
 class Mesin {
   void nyala() {}
 }
@@ -176,16 +177,19 @@ class Motor implements Mesin {
     print("Mesin motor nyala");
   }
 }
-⚖️ Perbedaan extends vs implements
-extends	implements
+```
+## ⚖️ Perbedaan extends vs implements
+### extends	implements
 Turunan class	Implementasi interface
 Bisa pakai method parent	Wajib override semua method
 Relasi "is-a"	Kontrak
-🧮 Static Members & Method
-📌 Pengertian
+
+##🧮 Static Members & Method
+###📌 Pengertian
 
 Static adalah method atau variabel yang dimiliki oleh class, bukan objek.
 
+```dart
 class MathUtil {
   static int tambah(int a, int b) {
     return a + b;
@@ -195,8 +199,10 @@ class MathUtil {
 void main() {
   print(MathUtil.tambah(2, 3));
 }
-💼 CONTOH KASUS
-💳 Sistem Pembayaran
+```
+## 💼 CONTOH KASUS
+### 💳 Sistem Pembayaran
+```dart
 abstract class Pembayaran {
   void bayar();
 }
@@ -222,12 +228,14 @@ void main() {
   p1.bayar();
   p2.bayar();
 }
-
+```
 Output:
-
 Bayar via transfer
 Bayar via e-wallet
-🔷 Sistem Geometri
+
+
+## 🔷 Sistem Geometri
+```dart
 abstract class Bentuk {
   double hitungLuas();
 }
@@ -245,7 +253,7 @@ void main() {
   Bentuk persegi = Persegi(4);
   print("Luas Persegi: ${persegi.hitungLuas()}");
 }
+```dart
 
 Output:
-
 Luas Persegi: 16.0

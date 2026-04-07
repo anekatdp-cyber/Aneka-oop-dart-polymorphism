@@ -68,7 +68,7 @@ void main() {
   }
 }
 ```
-Output:
+### Output:
 Ini kucing
 
 ## 🔄 Operator as (casting)
@@ -92,7 +92,7 @@ void main() {
   (hewan as Kucing).bersuara();
 }
 ```
-Output:
+### Output:
 Meong
 
 

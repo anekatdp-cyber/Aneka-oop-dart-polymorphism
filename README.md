@@ -37,6 +37,7 @@ class Anjing extends Hewan {
     print("Guk Guk");
   }
 }
+
 ```dart
 void main() {
   Hewan h1 = Kucing();

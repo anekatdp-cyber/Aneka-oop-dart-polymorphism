@@ -253,6 +253,8 @@ void main() {
 ### Output:
 Luas Persegi: 16.0
 
+## BONUS 1
+
 ## Metode Dalam Kelas Abstrak
 ### 1. Apa yang dimaksud dengan method dalam kelas abstrak?
 

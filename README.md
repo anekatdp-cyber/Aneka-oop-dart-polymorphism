@@ -45,23 +45,12 @@ void main() {
   h1.bersuara();
   h2.bersuara();
 }
-
-```dart
-
-## 📌 Manfaat Polimorfisme
+📌 Manfaat Polimorfisme
 Kode lebih fleksibel
 Mudah dikembangkan
 Mengurangi duplikasi kode
-
-##🔍 is dan as Operator
-##🔍 Operator is dan as di Dart
-
-##🧠 1. Operator is (cek tipe data)
-##📌 Pengertian
-is digunakan untuk mengecek apakah suatu objek termasuk tipe tertentu
-👉 Hasilnya: true / false
-
-💻 Contoh
+🔍 Operator is dan as
+🧠 Operator is (cek tipe data)
 class Hewan {}
 class Kucing extends Hewan {}
 
@@ -73,14 +62,10 @@ void main() {
   }
 }
 
-👉 Output:
+Output:
+
 Ini kucing
-
-🔄 2. Operator as (casting tipe data)
-📌 Pengertian
-as digunakan untuk mengubah tipe objek ke tipe tertentu (casting)
-
-💻 Contoh
+🔄 Operator as (casting)
 class Hewan {
   void bersuara() {
     print("Hewan bersuara");
@@ -100,67 +85,18 @@ void main() {
   (hewan as Kucing).bersuara();
 }
 
-👉 Output:
+Output:
+
 Meong
-
-⚠️ Penting!
-
-class Hewan {
-  void bersuara() {
-    print("Hewan bersuara");
-  }
-}
-
-class Kucing extends Hewan {
-  @override
-  void bersuara() {
-    print("Meong");
-  }
-}
-
+⚠️ Penggunaan Aman
 void main() {
   Hewan hewan = Kucing();
 
-  // cek tipe
   if (hewan is Kucing) {
-    print("Ini kucing");
-  }
-
-  // casting
-  (hewan as Kucing).bersuara();
-}
-🧪  **Polimorfisme**
-Polimorfisme adalah:
-
-Kemampuan satu method (fungsi) untuk memiliki banyak bentuk atau perilaku berbeda, tergantung objek yang memanggilnya.
-
-📌 Penjelasan Sederhana
-
-Bayangkan ada method:
-
-bersuara()
-
-👉 Tapi hasilnya bisa berbeda:
-
-Kucing → Meong
-Anjing → Guk Guk
-
-➡️ Method sama, hasil berbeda
-
-Contohnya ;
-
-void main() {
-  List<Hewan> daftarHewan = [
-    Kucing(),
-    Anjing(),
-    Burung()
-  ];
-
-  for (var h in daftarHewan) {
-    h.bersuara();
+    (hewan as Kucing).bersuara();
   }
 }
-
+🧪 Contoh Polimorfisme (List)
 class Hewan {
   void bersuara() {
     print("Hewan bersuara");
@@ -182,14 +118,23 @@ class Burung extends Hewan {
   void bersuara() => print("Cuit Cuit");
 }
 
-**🧠 2. ABSTRAKSI**
+void main() {
+  List<Hewan> daftarHewan = [
+    Kucing(),
+    Anjing(),
+    Burung()
+  ];
+
+  for (var h in daftarHewan) {
+    h.bersuara();
+  }
+}
+🧠 2. ABSTRAKSI
 📌 Pengertian
+
 Abstraksi adalah menyembunyikan detail implementasi dan hanya menampilkan fungsi penting.
 
 🧩 Abstract Class
-
-Contohnys ;
-
 abstract class Kendaraan {
   void jalan();
 }
@@ -205,10 +150,7 @@ void main() {
   Kendaraan mobil = Mobil();
   mobil.jalan();
 }
-🔌 Interface di Dart
-
-Semua class bisa jadi interface menggunakan implements
-
+🔌 Interface (implements)
 class Mesin {
   void nyala() {}
 }
@@ -219,24 +161,15 @@ class Motor implements Mesin {
     print("Mesin motor nyala");
   }
 }
-
 ⚖️ Perbedaan extends vs implements
-
 extends	implements
 Turunan class	Implementasi interface
-Bisa pakai method parent	Harus override semua method
+Bisa pakai method parent	Wajib override semua method
 Relasi "is-a"	Kontrak
-
 🧮 Static Members & Method
 📌 Pengertian
-Static Members & Method adalah:
-Properti atau fungsi yang dimiliki oleh class, bukan oleh objek.
 
-👉 Artinya:
-Tidak perlu membuat object
-Bisa langsung dipanggil dari nama class.
-
-Contohnya ;
+Static adalah method atau variabel yang dimiliki oleh class, bukan objek.
 
 class MathUtil {
   static int tambah(int a, int b) {
@@ -247,9 +180,8 @@ class MathUtil {
 void main() {
   print(MathUtil.tambah(2, 3));
 }
-
 💼 CONTOH KASUS
-💳 1. Sistem Pembayaran
+💳 Sistem Pembayaran
 abstract class Pembayaran {
   void bayar();
 }
@@ -275,14 +207,12 @@ void main() {
   p1.bayar();
   p2.bayar();
 }
-🎯 Output
+
+Output:
+
 Bayar via transfer
 Bayar via e-wallet
-
-🔷 2. Sistem Bentuk Geometri
-
-Contohnya ;
-
+🔷 Sistem Geometri
 abstract class Bentuk {
   double hitungLuas();
 }
@@ -300,5 +230,7 @@ void main() {
   Bentuk persegi = Persegi(4);
   print("Luas Persegi: ${persegi.hitungLuas()}");
 }
-🎯 Output
+
+Output:
+
 Luas Persegi: 16.0

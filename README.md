@@ -55,6 +55,8 @@ Mengurangi duplikasi kode
 
 ## 🔍 Operator is dan as
 🧠 Operator is (cek tipe data)
+
+```dart
 class Hewan {}
 class Kucing extends Hewan {}
 
@@ -65,11 +67,11 @@ void main() {
     print("Ini kucing");
   }
 }
-
+```
 Output:
-
 Ini kucing
-🔄 Operator as (casting)
+
+## 🔄 Operator as (casting)
 class Hewan {
   void bersuara() {
     print("Hewan bersuara");

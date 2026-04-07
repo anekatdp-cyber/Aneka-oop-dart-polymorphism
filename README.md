@@ -167,6 +167,11 @@ class Motor implements Mesin {
     print("Mesin motor nyala");
   }
 }
+
+void main() {
+  Motor motor = Motor();
+  motor.nyala();
+}
 ```
 ## ⚖️ Perbedaan extends vs implements
  extends	implements

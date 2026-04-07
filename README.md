@@ -1,16 +1,13 @@
 📘 RESUME SESI 4
 Polimorfisme & Abstraksi (Dart)
 🎯 Tujuan
-
 Peserta memahami konsep Polimorfisme dan Abstraksi serta mampu mengimplementasikannya dalam program Dart.
 
 🧠 1. POLIMORFISME
 📌 Pengertian
-
 Polimorfisme adalah kemampuan objek untuk memiliki banyak bentuk, biasanya melalui inheritance (pewarisan).
 
 📌 Contoh Konsep
-
 Satu method → hasil berbeda tergantung objeknya.
 
 💡 Polimorfisme dengan Inheritance

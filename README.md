@@ -33,10 +33,12 @@ class Anjing extends Hewan {
     print("Guk Guk");
   }
 }
+
 📌 Manfaat Polimorfisme
 Kode lebih fleksibel
 Mudah dikembangkan
 Mengurangi duplikasi kode
+
 🔍 is dan as Operator
 ➤ is (cek tipe data)
 if (hewan is Kucing) {
@@ -44,7 +46,8 @@ if (hewan is Kucing) {
 }
 ➤ as (casting tipe)
 (hewan as Kucing).bersuara();
-🧪 Latihan Polimorfisme (WAJIB ADA DI TUGAS)
+
+🧪 Latihan Polimorfisme 
 void main() {
   List<Hewan> daftarHewan = [
     Kucing(),
@@ -107,11 +110,14 @@ class Motor implements Mesin {
     print("Mesin motor nyala");
   }
 }
+
 ⚖️ Perbedaan extends vs implements
+
 extends	implements
 Turunan class	Implementasi interface
 Bisa pakai method parent	Harus override semua method
 Relasi "is-a"	Kontrak
+
 🧮 Static Members & Method
 class MathUtil {
   static int tambah(int a, int b) {
@@ -122,6 +128,7 @@ class MathUtil {
 void main() {
   print(MathUtil.tambah(2, 3));
 }
+
 💼 CONTOH KASUS
 💳 1. Sistem Pembayaran
 abstract class Pembayaran {
@@ -141,6 +148,7 @@ class EWallet extends Pembayaran {
     print("Bayar via e-wallet");
   }
 }
+
 🔷 2. Sistem Bentuk Geometri
 abstract class Bentuk {
   double hitungLuas();
@@ -154,35 +162,6 @@ class Persegi extends Bentuk {
   @override
   double hitungLuas() => sisi * sisi;
 }
-📌 CARA KERJAKAN TUGAS
-✅ Tugas 1
-Buat resume seperti ini di GitHub
-Sertakan:
-Penjelasan teori
-Semua contoh kode
-Pastikan:
-Bisa dijalankan di DartPad
-Minta ACC ke mentor
-🎁 Bonus 1, 2, 3
-Ambil soal di slide halaman 17
-Gabungkan semua jawaban ke dalam Tugas 1
-📢 Setelah ACC
-Laporkan di forum:
-"Tugas Sesi 4 sudah ACC"
-🔥 Tips Biar Cepat ACC
-Gunakan 1 file .dart yang rapi
-Tambahkan komentar di kode
-Pastikan output jelas
-Jangan hanya copy, pahami alurnya
-
-Kalau mau, aku bisa bantu:
-✅ Buatkan template repo GitHub
-✅ Gabungkan semua jadi 1 file siap submit
-✅ Bantu jawab soal bonus (hal 17)
-
-Tinggal bilang aja 👍
-
-bikin 1 dart saja
 
 Berikut saya buatkan 1 file Dart lengkap (sudah mencakup semua materi: polimorfisme, abstraksi, latihan, dan contoh kasus).
 Tinggal copy ke DartPad (dartpad.dev) atau ke file main.dart di GitHub ✅

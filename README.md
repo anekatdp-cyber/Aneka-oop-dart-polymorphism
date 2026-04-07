@@ -46,9 +46,9 @@ void main() {
   h2.bersuara();
 }
 
-</> markdown
+```dart
 
-##📌 Manfaat Polimorfisme
+## 📌 Manfaat Polimorfisme
 Kode lebih fleksibel
 Mudah dikembangkan
 Mengurangi duplikasi kode

@@ -95,16 +95,6 @@ void main() {
 Output:
 Meong
 
-⚠️ Penggunaan Aman
-```dart
-void main() {
-  Hewan hewan = Kucing();
-
-  if (hewan is Kucing) {
-    (hewan as Kucing).bersuara();
-  }
-}
-```
 
 ## 🧪 Contoh Polimorfisme (List)
 ```dart

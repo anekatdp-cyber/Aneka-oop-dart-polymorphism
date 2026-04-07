@@ -31,6 +31,14 @@ class Anjing extends Hewan {
   }
 }
 
+void main() {
+  Hewan h1 = Kucing();
+  Hewan h2 = Anjing();
+
+  h1.bersuara(); // Output: Meong
+  h2.bersuara(); // Output: Guk Guk
+}
+
 📌 Manfaat Polimorfisme
 Kode lebih fleksibel
 Mudah dikembangkan

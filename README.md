@@ -72,6 +72,7 @@ Output:
 Ini kucing
 
 ## 🔄 Operator as (casting)
+```dart
 class Hewan {
   void bersuara() {
     print("Hewan bersuara");
@@ -90,10 +91,12 @@ void main() {
 
   (hewan as Kucing).bersuara();
 }
-
+```
 Output:
 Meong
+
 ⚠️ Penggunaan Aman
+```dart
 void main() {
   Hewan hewan = Kucing();
 
@@ -101,7 +104,10 @@ void main() {
     (hewan as Kucing).bersuara();
   }
 }
-🧪 Contoh Polimorfisme (List)
+```
+
+## 🧪 Contoh Polimorfisme (List)
+```dart
 class Hewan {
   void bersuara() {
     print("Hewan bersuara");
@@ -134,12 +140,15 @@ void main() {
     h.bersuara();
   }
 }
-🧠 2. ABSTRAKSI
-📌 Pengertian
+```
+
+## 🧠 2. ABSTRAKSI
+## 📌 Pengertian
 
 Abstraksi adalah menyembunyikan detail implementasi dan hanya menampilkan fungsi penting.
 
-🧩 Abstract Class
+## 🧩 Abstract Class
+```dart
 abstract class Kendaraan {
   void jalan();
 }
@@ -155,6 +164,7 @@ void main() {
   Kendaraan mobil = Mobil();
   mobil.jalan();
 }
+```
 🔌 Interface (implements)
 class Mesin {
   void nyala() {}

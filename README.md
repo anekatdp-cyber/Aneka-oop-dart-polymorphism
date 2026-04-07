@@ -1,18 +1,23 @@
-</> Markdown
-#📘 **RESUME SESI 4**
+# 📘 RESUME SESI 4
 
-##Polimorfisme & Abstraksi (Dart)
-###🎯 Tujuan
+## Polimorfisme & Abstraksi (Dart)
+
+### 🎯 Tujuan
 Peserta memahami konsep Polimorfisme dan Abstraksi serta mampu mengimplementasikannya dalam program Dart.
 
-🧠 1. POLIMORFISME
-📌 Pengertian
+---
+
+# 🧠 1. POLIMORFISME
+
+## 📌 Pengertian
 Polimorfisme adalah kemampuan objek untuk memiliki banyak bentuk, biasanya melalui inheritance (pewarisan).
 
-📌 Contoh Konsep
+## 📌 Contoh Konsep
 Satu method → hasil berbeda tergantung objeknya.
 
-💡 Polimorfisme dengan Inheritance ;
+## 💡 Contoh Polimorfisme (Inheritance)
+
+```dart
 class Hewan {
   void bersuara() {
     print("Hewan bersuara");
@@ -37,8 +42,8 @@ void main() {
   Hewan h1 = Kucing();
   Hewan h2 = Anjing();
 
-  h1.bersuara(); // Output: Meong
-  h2.bersuara(); // Output: Guk Guk
+  h1.bersuara();
+  h2.bersuara();
 }
 
 📌 Manfaat Polimorfisme

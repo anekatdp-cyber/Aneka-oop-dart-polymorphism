@@ -253,7 +253,7 @@ void main() {
   Bentuk persegi = Persegi(4);
   print("Luas Persegi: ${persegi.hitungLuas()}");
 }
-```dart
+```
 
 Output:
 Luas Persegi: 16.0

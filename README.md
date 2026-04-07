@@ -45,8 +45,8 @@ void main() {
   h1.bersuara();
   h2.bersuara();
 }
-}
-```dart
+
+```
 
 📌 Manfaat Polimorfisme
 Kode lebih fleksibel

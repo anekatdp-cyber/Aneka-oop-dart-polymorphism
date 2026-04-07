@@ -252,3 +252,26 @@ void main() {
 
 ### Output:
 Luas Persegi: 16.0
+
+## Metode Dalam Kelas Abstrak
+### 1. Apa yang dimaksud dengan method dalam kelas abstrak?
+
+Method dalam kelas abstrak adalah fungsi yang dideklarasikan di dalam abstract class yang digunakan sebagai pedoman bagi class turunannya. Method ini bisa berupa method tanpa isi maupun dengan isi.
+
+### 2. Apa itu method abstrak?
+
+Method abstrak adalah method yang tidak memiliki isi (body) dan wajib diimplementasikan oleh subclass (class turunan).
+
+Contoh:
+```dart
+void start();
+```
+### 3. Apa itu method biasa (concrete method)?
+
+Method biasa adalah method yang memiliki isi (implementasi) dan dapat langsung digunakan oleh subclass tanpa harus di-override.
+
+Contoh:
+
+void stop() {
+  print("Mesin berhenti");
+}

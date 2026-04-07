@@ -179,13 +179,13 @@ class Motor implements Mesin {
 }
 ```
 ## ⚖️ Perbedaan extends vs implements
-### extends	implements
+ extends	implements
 Turunan class	Implementasi interface
 Bisa pakai method parent	Wajib override semua method
 Relasi "is-a"	Kontrak
 
-##🧮 Static Members & Method
-###📌 Pengertian
+## 🧮 Static Members & Method
+### 📌 Pengertian
 
 Static adalah method atau variabel yang dimiliki oleh class, bukan objek.
 

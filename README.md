@@ -48,11 +48,12 @@ void main() {
 
 ```
 
-##📌 Manfaat Polimorfisme
+## 📌 Manfaat Polimorfisme
 Kode lebih fleksibel
 Mudah dikembangkan
 Mengurangi duplikasi kode
-🔍 Operator is dan as
+
+## 🔍 Operator is dan as
 🧠 Operator is (cek tipe data)
 class Hewan {}
 class Kucing extends Hewan {}

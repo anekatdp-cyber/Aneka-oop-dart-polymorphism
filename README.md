@@ -37,7 +37,7 @@ class Anjing extends Hewan {
     print("Guk Guk");
   }
 }
-```dart
+
 void main() {
   Hewan h1 = Kucing();
   Hewan h2 = Anjing();
@@ -45,7 +45,7 @@ void main() {
   h1.bersuara();
   h2.bersuara();
 }
----
+```dart
 ##📌 Manfaat Polimorfisme
 Kode lebih fleksibel
 Mudah dikembangkan

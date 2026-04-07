@@ -266,7 +266,21 @@ Method abstrak adalah method yang tidak memiliki isi (body) dan wajib diimplemen
 
 Contoh:
 ```dart
-void start();
+abstract class Mesin {
+  void start();
+}
+
+class Motor extends Mesin {
+  @override
+  void start() {
+    print("Mesin motor menyala");
+  }
+}
+
+void main() {
+  Motor motor = Motor();
+  motor.start();
+}
 ```
 ### 3. Apa itu method biasa (concrete method)?
 
@@ -274,8 +288,17 @@ Method biasa adalah method yang memiliki isi (implementasi) dan dapat langsung d
 
 Contoh:
 ```dart
-void stop() {
-  print("Mesin berhenti");
+abstract class Mesin {
+  void stop() {
+    print("Mesin berhenti");
+  }
+}
+
+class Motor extends Mesin {}
+
+void main() {
+  Motor motor = Motor();
+  motor.stop(); // langsung bisa dipakai
 }
 ```
 ## BONUS 2

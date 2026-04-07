@@ -255,5 +255,5 @@ void main() {
 }
 ```
 
-Output:
+### Output:
 Luas Persegi: 16.0

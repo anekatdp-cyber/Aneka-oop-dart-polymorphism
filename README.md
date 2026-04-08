@@ -258,6 +258,7 @@ Luas Persegi: 16.0
 import 'dart:math';
 
 // 1. ABSTRACT CLASS (ADA ABSTRACT + NON-ABSTRACT METHOD)
+```dart
 abstract class Pekerja {
   // abstract method
   void bekerja();

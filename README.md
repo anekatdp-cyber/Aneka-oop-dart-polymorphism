@@ -255,65 +255,38 @@ Luas Persegi: 16.0
 
 ## BONUS 1
 
-## Metode Dalam Kelas Abstrak
-### 1. Apa yang dimaksud dengan method dalam kelas abstrak?
+import 'dart:math';
 
-Method dalam kelas abstrak adalah fungsi yang dideklarasikan di dalam abstract class yang digunakan sebagai pedoman bagi class turunannya. Method ini bisa berupa method tanpa isi maupun dengan isi.
+// 1. ABSTRACT CLASS (ADA ABSTRACT + NON-ABSTRACT METHOD)
+abstract class Pekerja {
+  // abstract method
+  void bekerja();
 
-### 2. Apa itu method abstrak?
-
-Method abstrak adalah method yang tidak memiliki isi (body) dan wajib diimplementasikan oleh subclass (class turunan).
-
-Contoh:
-```dart
-abstract class Mesin {
-  void start();
+  // non-abstract method
+  void istirahat() {
+    print("Sedang istirahat");
+  }
 }
 
-class Motor extends Mesin {
+// 2. IMPLEMENTASI CLASS
+class Programmer extends Pekerja {
   @override
-  void start() {
-    print("Mesin motor menyala");
+  void bekerja() {
+    print("Programmer sedang coding");
   }
 }
 
-void main() {
-  Motor motor = Motor();
-  motor.start();
-}
-```
-### 3. Apa itu method biasa (concrete method)?
-
-Method biasa adalah method yang memiliki isi (implementasi) dan dapat langsung digunakan oleh subclass tanpa harus di-override.
-
-Contoh:
-```dart
-abstract class Mesin {
-  void stop() {
-    print("Mesin berhenti");
+class Dokter extends Pekerja {
+  @override
+  void bekerja() {
+    print("Dokter sedang memeriksa pasien");
   }
 }
 
-class Motor extends Mesin {}
-
-void main() {
-  Motor motor = Motor();
-  motor.stop(); // langsung bisa dipakai
+class Guru extends Pekerja {
+  @override
+  void bekerja() {
+    print("Guru sedang mengajar");
+  }
 }
 ```
-## BONUS 2
-### 4. Apa perbedaan method abstrak dan method biasa?
-Method Abstrak	Method Biasa
-Tidak memiliki isi	Memiliki isi
-Wajib di-override	Tidak wajib di-override
-Hanya deklarasi	Sudah ada implementasi
-
-## BONUS 3
-### 5. Apa tujuan penggunaan method dalam kelas abstrak?
-
-Tujuannya adalah untuk:
-
-Menjadi kerangka (template) bagi subclass
-Memastikan subclass memiliki method tertentu
-Membantu penerapan konsep polimorfisme
-Membuat kode lebih terstruktur dan konsisten

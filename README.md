@@ -389,7 +389,7 @@ class MathUtils {
   }
 }
 
-// WAJIB ADA MAIN AGAR BISA DIJALANKAN DI DARTPAD
+
 void main() {
   print("=== MathUtils ===");
 
